@@ -64,6 +64,13 @@ const Projects = () => {
       color: "secondary"
     },
     {
+      title: "Urblinx Integrated Services",
+      description: "Urblinx Integrated Services Pvt. Ltd. is a future-ready company offering Integrated Facility Management, Real Estate Advisory, Workforce Solutions, and Smart Building Services. ",
+      tech: ["Codeigniter", "PHP", "EmailJs"],
+      link: "urblinx.com",
+      color: "accent"
+    },
+    {
       title: "Quiz Management System",
       description: "Desktop application built with Java Swing for creating, managing, and conducting educational quizzes.",
       tech: ["Java", "Swing", "SQLite"],
