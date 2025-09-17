@@ -67,7 +67,7 @@ const Projects = () => {
       title: "Urblinx Integrated Services",
       description: "Urblinx Integrated Services Pvt. Ltd. is a future-ready company offering Integrated Facility Management, Real Estate Advisory, Workforce Solutions, and Smart Building Services. ",
       tech: ["Codeigniter", "PHP", "EmailJs"],
-      link: "urblinx.com",
+      link: "https://urblinx.com",
       color: "accent"
     },
     {
