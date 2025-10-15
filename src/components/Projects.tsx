@@ -6,79 +6,86 @@ const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const projects = [
-    {
-      title: "TAB Unscripted",
-      description: "A modern platform built with React, Tailwind CSS, Node.js, and MongoDB for creative content management.",
-      tech: ["React", "Tailwind", "Node.js", "MongoDB"],
-      link: "https://tabunscripted.in",
-      color: "primary"
-    },
-    {
-      title: "HPBSMDA Portal",
-      description: "Government portal for Himachal Pradesh using PHP CodeIgniter and MySQL for seamless administrative operations.",
-      tech: ["PHP", "CodeIgniter", "MySQL"],
-      link: "https://bsmda.hp.gov.in",
-      color: "secondary"
-    },
-    {
-      title: "HP Drug Licensing",
-      description: "Drug licensing management system for Himachal Pradesh government with PHP, JavaScript, and SQL integration.",
-      tech: ["PHP", "JavaScript", "SQL"],
-      link: "https://dcla.hp.gov.in",
-      color: "accent"
-    },
-    {
-      title: "TAB Library",
-      description: "Educational library management system built with PHP CodeIgniter for efficient book and resource management.",
-      tech: ["PHP", "CodeIgniter", "MySQL"],
-      link: "https://tablibrary.in",
-      color: "primary"
-    },
-    {
-      title: "TAB Educational Institute",
-      description: "Complete educational platform with course management, student portal, and administrative features.",
-      tech: ["PHP", "MySQL", "JavaScript"],
-      link: "https://theabei.in",
-      color: "secondary"
-    },
-    {
-      title: "Dr. Bhatia Surgical Center",
-      description: "Medical center website with appointment booking, doctor profiles, and patient management system.",
-      tech: ["PHP", "MySQL", "JavaScript"],
-      link: "https://drbhatiasent.com",
-      color: "accent"
-    },
-    {
-      title: "The Artist Barefoot",
-      description: "Creative agency website with portfolio showcase, project galleries, and client management features.",
-      tech: ["PHP", "MySQL", "JavaScript"],
-      link: "https://theartistbarefoot.com",
-      color: "primary"
-    },
-    {
-      title: "Tanmay Mukherjee Drum Circle",
-      description: "Music artist portfolio built with modern web technologies and deployed on Vercel for optimal performance.",
-      tech: ["React", "Vercel", "JavaScript"],
-      link: "https://tanmaymukherjee.vercel.app",
-      color: "secondary"
-    },
-    {
-      title: "Urblinx Integrated Services",
-      description: "Urblinx Integrated Services Pvt. Ltd. is a future-ready company offering Integrated Facility Management, Real Estate Advisory, Workforce Solutions, and Smart Building Services. ",
-      tech: ["Codeigniter", "PHP", "EmailJs"],
-      link: "https://urblinx.com",
-      color: "accent"
-    },
-    {
-      title: "Quiz Management System",
-      description: "Desktop application built with Java Swing for creating, managing, and conducting educational quizzes.",
-      tech: ["Java", "Swing", "SQLite"],
-      link: "#",
-      color: "accent"
-    }
-  ];
-
+const projects = [
+  {
+    title: "HPBSMDA Portal",
+    description: "Government portal for Himachal Pradesh using PHP CodeIgniter and MySQL for seamless administrative operations.",
+    tech: ["PHP", "CodeIgniter", "MySQL"],
+    link: "https://bsmda.hp.gov.in",
+    color: "secondary"
+  },
+  {
+    title: "Dr. Bhatia Surgical Center",
+    description: "Medical center website with appointment booking, doctor profiles, and patient management system.",
+    tech: ["React", "EmailJs", "JavaScript"],
+    link: "https://drbhatiaent.com",
+    color: "accent"
+  },
+  {
+    title: "HP Drug Licensing",
+    description: "Drug licensing management system for Himachal Pradesh government with PHP, JavaScript, and SQL integration.",
+    tech: ["PHP", "JavaScript", "SQL"],
+    link: "https://dcla.hp.gov.in",
+    color: "accent"
+  },
+  {
+    title: "TAB Library",
+    description: "Educational library management system built with PHP CodeIgniter for efficient book and resource management.",
+    tech: ["PHP", "CodeIgniter", "MySQL"],
+    link: "https://tablibrary.in",
+    color: "primary"
+  },
+  {
+    title: "TAB Educational Institute",
+    description: "Complete educational platform with course management, student portal, and administrative features.",
+    tech: ["PHP", "MySQL", "JavaScript"],
+    link: "https://theabei.in",
+    color: "secondary"
+  },
+  {
+    title: "Checkin Portal",
+    description: "Employee check-in and attendance management system built for The Artist Barefoot, featuring real-time tracking and secure data handling.",
+    tech: ["PHP", "Core PHP", "MySQL"],
+    link: "https://checkin.theartistbarefoot.com",
+    color: "primary"
+  },
+  {
+    title: "The Artist Barefoot",
+    description: "Creative agency website with portfolio showcase, project galleries, and client management features.",
+    tech: ["React Js", "MySQL", "JavaScript"],
+    link: "https://theartistbarefoot.com",
+    color: "primary"
+  },
+  {
+    title: "Urblinx Integrated Services",
+    description: "Urblinx Integrated Services Pvt. Ltd. is a future-ready company offering Integrated Facility Management, Real Estate Advisory, Workforce Solutions, and Smart Building Services.",
+    tech: ["Codeigniter", "PHP", "EmailJs"],
+    link: "https://urblinx.com",
+    color: "accent"
+  },
+  {
+    title: "Quiz Management System",
+    description: "Desktop application built with Java Swing for creating, managing, and conducting educational quizzes.",
+    tech: ["Java", "Swing", "SQLite"],
+    link: "#",
+    color: "accent"
+  },
+  {
+    title: "TAB Unscripted",
+    description: "A modern platform built with React, Tailwind CSS, Node.js, and MongoDB for creative content management.",
+    tech: ["React", "Tailwind", "Node.js", "MongoDB"],
+    link: "https://tabunscripted.in",
+    color: "primary"
+  },
+  {
+    title: "Tanmay Mukherjee Drum Circle",
+    description: "Music artist portfolio built with modern web technologies and deployed on Vercel for optimal performance.",
+    tech: ["React", "Vercel", "JavaScript"],
+    link: "https://tanmaymukherjee.vercel.app",
+    color: "secondary"
+  }
+];
+  
   const containerVariants = {
     hidden: {},
     visible: {
