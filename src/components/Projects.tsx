@@ -29,6 +29,13 @@ const projects = [
     color: "accent"
   },
   {
+    title: "Tanmay Mukherjee Drum Circle",
+    description: "Music artist portfolio built with modern web technologies and deployed on Vercel for optimal performance.",
+    tech: ["React", "Vercel", "JavaScript"],
+    link: "https://tanmaydrumcircle.in/",
+    color: "secondary"
+  },
+  {
     title: "TAB Library",
     description: "Educational library management system built with PHP CodeIgniter for efficient book and resource management.",
     tech: ["PHP", "CodeIgniter", "MySQL"],
@@ -77,13 +84,6 @@ const projects = [
     link: "https://tabunscripted.in",
     color: "primary"
   },
-  {
-    title: "Tanmay Mukherjee Drum Circle",
-    description: "Music artist portfolio built with modern web technologies and deployed on Vercel for optimal performance.",
-    tech: ["React", "Vercel", "JavaScript"],
-    link: "https://tanmaymukherjee.vercel.app",
-    color: "secondary"
-  }
 ];
   
   const containerVariants = {
