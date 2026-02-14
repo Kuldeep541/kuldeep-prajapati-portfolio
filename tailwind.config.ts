@@ -26,6 +26,10 @@ export default {
 				'pacifico': ['Pacifico', 'cursive'],
 			},
 			colors: {
+				black: '#000000',
+				violet: '#7E3BED',
+				white: '#FFFFFF',
+				lime: '#C6FF34',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

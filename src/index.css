@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    /* Dark theme colors */
-    --background: 225 39% 5%; /* #0f172a */
-    --foreground: 0 0% 98%;
+    /* Flat Color Palette - No Gradients */
+    --background: 0 0% 0%; /* #000000 */
+    --foreground: 0 0% 100%; /* #FFFFFF */
     
-    --dark: 225 71% 3%; /* #020617 */
-    --darker: 225 71% 3%;
+    --dark: 0 0% 0%; /* #000000 */
+    --darker: 0 0% 0%; /* #000000 */
     
-    /* Brand colors */
-    --primary: 239 84% 67%; /* #6366f1 */
-    --primary-foreground: 0 0% 98%;
+    /* Brand colors - Flat - LIME PRIMARY */
+    --primary: 79 99% 62%; /* #C6FF34 Lime */
+    --primary-foreground: 0 0% 0%; /* #000000 */
     
-    --secondary: 258 89% 66%; /* #8b5cf6 */
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 79 99% 62%; /* #C6FF34 Lime */
+    --secondary-foreground: 0 0% 0%; /* #000000 */
     
-    --accent: 330 81% 60%; /* #ec4899 */
-    --accent-foreground: 0 0% 98%;
+    --accent: 79 99% 62%; /* #C6FF34 Lime */
+    --accent-foreground: 0 0% 0%; /* #000000 */
     
     /* Card and surfaces */
-    --card: 225 39% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 0%; /* #000000 */
+    --card-foreground: 0 0% 100%; /* #FFFFFF */
     
-    --popover: 225 39% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 0%; /* #000000 */
+    --popover-foreground: 0 0% 100%; /* #FFFFFF */
     
-    --muted: 225 39% 12%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 10%; /* Dark gray for muted */
+    --muted-foreground: 0 0% 100%; /* #FFFFFF */
     
-    --border: 225 39% 15%;
-    --input: 225 39% 15%;
-    --ring: 239 84% 67%;
+    --border: 79 99% 62%; /* #C6FF34 Lime */
+    --input: 0 0% 5%; /* Near black for inputs */
+    --ring: 79 99% 62%; /* #C6FF34 Lime */
     
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
     
     --radius: 0.75rem;
     
-    /* Portfolio specific design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
-    --card-gradient: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
-    --glow-primary: 0 20px 40px hsl(var(--primary) / 0.3);
-    --glow-secondary: 0 20px 40px hsl(var(--secondary) / 0.3);
-    --glow-accent: 0 20px 40px hsl(var(--accent) / 0.3);
-    --neon-glow: 0 0 20px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--primary) / 0.4);
-    --image-glow: 0 20px 60px hsl(var(--primary) / 0.3);
+    /* Flat color shadows - No gradients - LIME GLOW ONLY */
+    --hero-gradient: linear-gradient(135deg, #C6FF34, #C6FF34, #C6FF34);
+    --card-gradient: linear-gradient(135deg, #000000, #1a1a1a);
+    --glow-primary: 0 0 20px rgba(198, 255, 52, 0.4);
+    --glow-secondary: 0 0 20px rgba(198, 255, 52, 0.4);
+    --glow-accent: 0 0 20px rgba(198, 255, 52, 0.4);
+    --neon-glow: 0 0 30px rgba(198, 255, 52, 0.5), 0 0 50px rgba(198, 255, 52, 0.3);
+    --image-glow: 0 0 20px rgba(198, 255, 52, 0.4);
     
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

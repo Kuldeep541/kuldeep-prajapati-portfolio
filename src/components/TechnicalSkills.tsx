@@ -206,7 +206,7 @@ const TechnicalSkills = () => {
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
               { number: "20+", label: "Technologies", icon: Code },
-              { number: "10+", label: "Projects", icon: Layers },
+              { number: "20+", label: "Projects", icon: Layers },
               { number: "1+", label: "Year Experience", icon: Calendar },
               { number: "100%", label: "Dedication", icon: Heart }
             ].map((stat, index) => (

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -14,7 +14,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here (EmailJS integration can be added)
     console.log('Form submitted:', formData);
     alert('Message sent! Thank you for reaching out.');
     setFormData({ name: '', email: '', message: '' });
@@ -27,189 +26,135 @@ const Contact = () => {
     });
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "kuldeepprajapati2111@gmail.com",
-      href: "mailto:kuldeepprajapati2111@gmail.com",
-      color: "primary"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 7380892966",
-      href: "tel:+917380892966 ",
-      color: "secondary"
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/kuldeep-prajapati",
-      href: "https://linkedin.com/in/kuldeep-prajapati-aa9276178",
-      color: "accent"
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "github.com/kuldeep541",
-      href: "https://github.com/kuldeep541",
-      color: "primary"
-    }
-  ];
-
   return (
- <section id="contact" className="py-16 sm:py-20 bg-background" ref={ref}>
-      <div className="container mx-auto px-4 sm:px-6">
+    <section id="contact" ref={ref} className="bg-black py-32 px-6 sm:px-8">
+      <div className="w-full max-w-7xl mx-auto">
+        {/* Section Title */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-16"
+          className="mb-20 text-center"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 font-sora">
-            Get In <span className="text-primary">Touch</span>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tighter text-white mb-8">
+            Let's <span className="text-lime">Build</span>
+            <br />
+            Something Great
           </h2>
-          <div className="w-16 sm:w-24 h-1 bg-hero-gradient mx-auto rounded-full" />
-          <p className="text-base sm:text-lg text-muted-foreground mt-4 sm:mt-6 max-w-2xl mx-auto font-inter">
-            Ready to bring your ideas to life? Let's collaborate and create something amazing together.
+          <p className="text-xl text-white max-w-2xl mx-auto">
+            Got a project in mind? Let's collaborate and create something amazing together.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl lg:max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-          {/* Contact Information */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6 font-poppins">
-                Let's Connect
-              </h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-inter mb-6 sm:mb-8">
-                Whether you have a project in mind, need technical consultation, or just want to say hello, 
-                I'm always excited to hear from fellow developers and potential collaborators.
+              <h3 className="text-3xl font-bold text-white mb-4">Get in touch</h3>
+              <p className="text-lg text-white">
+                Whether you have a project, question, or just want to connect, feel free to reach out.
               </p>
             </div>
 
-            <div className="space-y-4 sm:space-y-6">
-              {contactInfo.map((info, index) => {
-                const IconComponent = info.icon;
-                return (
-                  <motion.a
-                    key={info.label}
-                    href={info.href}
-                    target={info.href.startsWith('http') ? '_blank' : '_self'}
-                    rel={info.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-card border border-border rounded-xl hover:border-primary/50 transition-all duration-300 group"
-                  >
-                    <div className={`p-2 sm:p-3 rounded-lg ${
-                      info.color === 'primary' ? 'bg-primary/10 text-primary' :
-                      info.color === 'secondary' ? 'bg-secondary/10 text-secondary' :
-                      'bg-accent/10 text-accent'
-                    }`}>
-                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6" />
-                    </div>
-                    <div>
-                      <p className="text-xs sm:text-sm text-muted-foreground font-inter">{info.label}</p>
-                      <p className="text-sm sm:text-base text-foreground font-medium group-hover:text-primary transition-colors">
-                        {info.value}
-                      </p>
-                    </div>
-                  </motion.a>
-                );
-              })}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="pt-6 sm:pt-8"
+            <motion.a
+              href="mailto:kuldeeppprajapati2111@gmail.com"
+              whileHover={{ x: 8 }}
+              className="flex items-center gap-4 text-white hover:text-lime transition-colors duration-300 group"
             >
-              <motion.a
-                href="https://drive.google.com/file/d/1s9ppoRMGFS2qJUvyI8cuviyBoxE3H8tn/view?usp=drivesdk"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, boxShadow: 'var(--glow-primary)' }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-glow-primary text-sm sm:text-base"
-              >
-                Download Resume
-              </motion.a>
-            </motion.div>
+              <div className="w-14 h-14 bg-lime/10 rounded-xl flex items-center justify-center group-hover:bg-lime/20 transition-all duration-300">
+                <Mail className="text-lime" size={28} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-white">Email</p>
+                <p className="text-lg font-bold text-white">kuldeeppprajapati2111@gmail.com</p>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href="tel:+917380892966"
+              whileHover={{ x: 8 }}
+              className="flex items-center gap-4 text-white hover:text-lime transition-colors duration-300 group"
+            >
+              <div className="w-14 h-14 bg-lime/10 rounded-xl flex items-center justify-center group-hover:bg-lime/20 transition-all duration-300">
+                <Phone className="text-lime" size={28} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-white">Phone</p>
+                <p className="text-lg font-bold text-white">+91 7380892966</p>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href="https://drive.google.com/file/d/1s9ppoRMGFS2qJUvyI8cuviyBoxE3H8tn/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 bg-lime text-black font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(198,255,52,0.4)] hover:shadow-[0_0_30px_rgba(198,255,52,0.6)] transition-all duration-300 mt-8"
+            >
+              Download Resume
+              <ArrowRight size={24} />
+            </motion.a>
           </motion.div>
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-card border border-border rounded-xl p-4 sm:p-8"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="border border-lime/30 rounded-2xl p-8 bg-black/50"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6 font-poppins">
-              Send a Message
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+            <h3 className="text-2xl font-bold text-white mb-8">Send a message</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2 font-inter">
-                  Your Name
-                </label>
+                <label className="block text-white font-semibold mb-2">Name</label>
                 <input
                   type="text"
-                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 font-inter text-sm sm:text-base"
-                  placeholder="Enter your name"
+                  placeholder="Your name"
+                  className="w-full px-4 py-3 bg-black border border-lime/30 rounded-lg text-white placeholder-white/40 focus:border-lime focus:outline-none transition-all duration-300"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2 font-inter">
-                  Email Address
-                </label>
+                <label className="block text-white font-semibold mb-2">Email</label>
                 <input
                   type="email"
-                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 font-inter text-sm sm:text-base"
-                  placeholder="Enter your email"
+                  placeholder="your@email.com"
+                  className="w-full px-4 py-3 bg-black border border-lime/30 rounded-lg text-white placeholder-white/40 focus:border-lime focus:outline-none transition-all duration-300"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2 font-inter">
-                  Message
-                </label>
+                <label className="block text-white font-semibold mb-2">Message</label>
                 <textarea
-                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none font-inter text-sm sm:text-base"
                   placeholder="Tell me about your project..."
+                  className="w-full px-4 py-3 bg-black border border-lime/30 rounded-lg text-white placeholder-white/40 focus:border-lime focus:outline-none transition-all duration-300 resize-none"
                 />
               </div>
 
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02, boxShadow: 'var(--glow-secondary)' }}
+                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-glow-secondary text-sm sm:text-base"
+                className="w-full bg-lime text-black font-bold py-4 rounded-lg shadow-[0_0_20px_rgba(198,255,52,0.4)] hover:shadow-[0_0_30px_rgba(198,255,52,0.6)] transition-all duration-300"
               >
                 Send Message
               </motion.button>
